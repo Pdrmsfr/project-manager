@@ -20,7 +20,7 @@ module.exports = class Application {
     const http = require("http");
     const server = http.createServer(this.#app);
     server.listen(PORT, () => {
-      console.log(`Run Server On > http://loacalhost:${PORT}`);
+      console.log(`Run Server On > http://localhost:${PORT}`);
     });
   }
   configDatabase(DB_URL) {
@@ -53,7 +53,13 @@ module.exports = class Application {
         message: "this is a new application",
       });
     });
-
-    this.#app.use(AllRoutes);
+    
+    this.#app.use(AllRoutes)
+    // this.#app.use((err,req,res,next)=>{
+    //   try {
+    //   } catch (error) {
+    //       next(error);
+    //   }
+    // });
   }
 };
