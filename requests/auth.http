@@ -1,0 +1,11 @@
+###register request
+post http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username" : "pdrmsfr",
+    "email" : "pedram@gmail.com",
+    "mobile" : "09125065232",
+    "password" : "12345678",
+    "confrim_password" : "12345678"
+}
