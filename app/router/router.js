@@ -5,9 +5,9 @@ const { userRoutes } = require("./user");
 
 const router = require("express").Router();
 router.use("/auth",authRoutes)
-router.use("/auth",projectRoutes)
-router.use("/auth",userRoutes)
-router.use("/auth",teamRoutes)
+router.use("/project",projectRoutes)
+router.use("/user",userRoutes)
+router.use("/team",teamRoutes)
 module.exports = {
     AllRoutes : router
 }
